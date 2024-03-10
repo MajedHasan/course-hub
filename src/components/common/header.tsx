@@ -95,10 +95,12 @@ const Header = (props: Props) => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56">
                   <DropdownMenuGroup>
-                    <DropdownMenuItem>
-                      <User className="mr-2 h-4 w-4" />
-                      <span>Dashboard</span>
-                    </DropdownMenuItem>
+                    <Link href={`student.${process.env.NEXT_PUBLIC_DOMAIN}`}>
+                      <DropdownMenuItem>
+                        <User className="mr-2 h-4 w-4" />
+                        <span>Dashboard</span>
+                      </DropdownMenuItem>
+                    </Link>
                     <DropdownMenuItem>
                       <MessageCircle className="mr-2 h-4 w-4" />
                       <span>Messages</span>
