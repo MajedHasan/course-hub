@@ -51,7 +51,7 @@ export default function Home() {
         </section>
         <section className="container mx-auto md:my-20 my-8">
           <div className="flex items-center justify-between gap-10 mb-10">
-            <h2 className="text-3xl font-medium">Benefits</h2>
+            <h2 className="md:text-3xl text-xl font-medium">Benefits</h2>
             <Button asChild variant={"secondary"}>
               <Link href={"/"}>View All</Link>
             </Button>
@@ -143,7 +143,9 @@ export default function Home() {
         </section>
         <section className="container mx-auto md:my-20 my-8">
           <div className="flex items-center justify-between gap-10 mb-10">
-            <h2 className="text-3xl font-medium">Services Overview</h2>
+            <h2 className="md:text-3xl text-xl font-medium">
+              Services Overview
+            </h2>
             <Button asChild variant={"secondary"}>
               <Link href={"/"}>View All</Link>
             </Button>
@@ -160,7 +162,7 @@ export default function Home() {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Badge>4 Weeks</Badge>
                     <Badge>Beginner</Badge>
@@ -190,7 +192,7 @@ export default function Home() {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Badge>6 Weeks</Badge>
                     <Badge>Intermediate</Badge>
@@ -220,7 +222,7 @@ export default function Home() {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Badge>8 Weeks</Badge>
                     <Badge>Intermediate</Badge>
@@ -251,7 +253,7 @@ export default function Home() {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Badge>10 Weeks</Badge>
                     <Badge>Beginner</Badge>
@@ -283,7 +285,7 @@ export default function Home() {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Badge>10 Weeks</Badge>
                     <Badge>Intermediate</Badge>
@@ -314,7 +316,7 @@ export default function Home() {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Badge>6 Weeks</Badge>
                     <Badge>Advance</Badge>
@@ -339,7 +341,9 @@ export default function Home() {
         </section>
         <section className="container mx-auto md:my-20 my-8">
           <div className="flex items-center justify-between gap-10 mb-10">
-            <h2 className="text-3xl font-medium">Our Testimonials</h2>
+            <h2 className="md:text-3xl text-xl font-medium">
+              Our Testimonials
+            </h2>
             <Button asChild variant={"secondary"}>
               <Link href={"/"}>View All</Link>
             </Button>
