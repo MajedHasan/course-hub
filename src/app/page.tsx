@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <main className="py-10 bg-[url('/img/home-page-bg.png')]">
-        <section className="container mx-auto md:py-32 py-10">
+      <main className="py-10 bg-[url('/img/home-page-bg.png')] bg-[no-repeat] bg-[center center] bg-[cover]">
+        <section className="container mx-auto md:py-24 py-10">
           <div className="bg-[#FCFCFD] rounded md:p-5 p-2 max-w-fit w-full mx-auto flex items-center gap-5">
             <div className="bg-[#FAE3C3] rounded md:p-3 p-1">
               <Thunder />
@@ -28,6 +28,14 @@ export default function Home() {
               <Link href={""}>View Pricing</Link>
             </Button>
           </div>
+        </section>
+        <section className="container mx-auto">
+          <video
+            src="https://www.pexels.com/video/online-courses-list-5900947/"
+            controls
+            poster="/img/section-02-thumbnail.png"
+            className="w-full h-full max-h-[600px]"
+          ></video>
         </section>
       </main>
     </>
