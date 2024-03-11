@@ -1,3 +1,4 @@
+import NewsLetter from "@/components/common/newsletter";
 import Thunder from "@/components/icons/thunder";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -336,6 +337,125 @@ export default function Home() {
             </Card>
           </div>
         </section>
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="flex items-center justify-between gap-10 mb-10">
+            <h2 className="text-3xl font-medium">Our Testimonials</h2>
+            <Button asChild variant={"secondary"}>
+              <Link href={"/"}>View All</Link>
+            </Button>
+          </div>
+          <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
+            <Card>
+              <CardHeader>
+                <CardDescription className="mb-6">
+                  The web design course provided a solid foundation for me. The
+                  instructors were knowledgeable and supportive, and the
+                  interactive learning environment was engaging. I highly
+                  recommend it!
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={"/img/testimonial-img-1.png"}
+                      alt=""
+                      width={35}
+                      height={35}
+                      className="rounded"
+                    />
+                    <span className="font-bold text-sm">Sarah L</span>
+                  </div>
+                  <Button asChild variant={"secondary"}>
+                    <Link href={"/"}>Read Full Story</Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardDescription className="mb-6">
+                  The UI/UX design course exceeded my expectations. The
+                  instructor{"'"}s expertise and practical assignments helped me
+                  improve my design skills. I feel more confident in my career
+                  now. Thank you!
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={"/img/testimonial-img-1.png"}
+                      alt=""
+                      width={35}
+                      height={35}
+                      className="rounded"
+                    />
+                    <span className="font-bold text-sm">yassine</span>
+                  </div>
+                  <Button asChild variant={"secondary"}>
+                    <Link href={"/"}>Read Full Story</Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardDescription className="mb-6">
+                  The mobile app development course was fantastic! The
+                  step-by-step tutorials and hands-on projects helped me grasp
+                  the concepts easily. I{"'"}m now building my own app. Great
+                  course!
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={"/img/testimonial-img-1.png"}
+                      alt=""
+                      width={35}
+                      height={35}
+                      className="rounded"
+                    />
+                    <span className="font-bold text-sm">Aziza </span>
+                  </div>
+                  <Button asChild variant={"secondary"}>
+                    <Link href={"/"}>Read Full Story</Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardDescription className="mb-6">
+                  I enrolled in the graphic design course as a beginner, and it
+                  was the perfect starting point. The instructor{"'"}s guidance
+                  and feedback improved my design abilities significantly. I
+                  {"'"}m grateful for this course!
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={"/img/testimonial-img-1.png"}
+                      alt=""
+                      width={35}
+                      height={35}
+                      className="rounded"
+                    />
+                    <span className="font-bold text-sm">Salim</span>
+                  </div>
+                  <Button asChild variant={"secondary"}>
+                    <Link href={"/"}>Read Full Story</Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+          </div>
+        </section>
+        <NewsLetter />
       </main>
     </>
   );
