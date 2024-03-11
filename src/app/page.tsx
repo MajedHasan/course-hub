@@ -1,6 +1,16 @@
 import Thunder from "@/components/icons/thunder";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -128,6 +138,202 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
+          </div>
+        </section>
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="flex items-center justify-between gap-10 mb-10">
+            <h2 className="text-3xl font-medium">Services Overview</h2>
+            <Button asChild variant={"secondary"}>
+              <Link href={"/"}>View All</Link>
+            </Button>
+          </div>
+          <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-4 bg-[#FEFCF5] p-5 rounded-lg">
+            <Card>
+              <CardHeader>
+                <Image
+                  src={"/img/section-04-img-1.png"}
+                  alt="Card Image"
+                  width={100}
+                  height={100}
+                  className="w-full h-full"
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3">
+                    <Badge>4 Weeks</Badge>
+                    <Badge>Beginner</Badge>
+                  </div>
+                  <Badge>By Anas Moudnib</Badge>
+                </div>
+                <CardTitle>Online courses</CardTitle>
+                <CardDescription>
+                  Our intuitive course builder gives you the power to share what
+                  you know. No coding or design skills necessary.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="bg-themePrimary w-full">
+                  <Link href={"/"}>Get It Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Image
+                  src={"/img/section-04-img-2.png"}
+                  alt="Card Image"
+                  width={100}
+                  height={100}
+                  className="w-full h-full"
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3">
+                    <Badge>6 Weeks</Badge>
+                    <Badge>Intermediate</Badge>
+                  </div>
+                  <Badge>By Othmane Alaoui</Badge>
+                </div>
+                <CardTitle>Digital downloads</CardTitle>
+                <CardDescription>
+                  Reach your audience with the content they want, faster than
+                  ever. Sell PDFs, audio clips, and more.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="bg-themePrimary w-full">
+                  <Link href={"/"}>Get It Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Image
+                  src={"/img/section-04-img-3.png"}
+                  alt="Card Image"
+                  width={100}
+                  height={100}
+                  className="w-full h-full"
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3">
+                    <Badge>8 Weeks</Badge>
+                    <Badge>Intermediate</Badge>
+                  </div>
+                  <Badge>By Salima Zarouali</Badge>
+                </div>
+                <CardTitle>Coaching</CardTitle>
+                <CardDescription>
+                  Dive into the world of mobile app development. Learn to build
+                  native iOS and Android applications using industry-leading
+                  frameworks like Swift and Kotlin.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="bg-themePrimary w-full">
+                  <Link href={"/"}>Get It Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Image
+                  src={"/img/section-04-img-4.png"}
+                  alt="Card Image"
+                  width={100}
+                  height={100}
+                  className="w-full h-full"
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3">
+                    <Badge>10 Weeks</Badge>
+                    <Badge>Beginner</Badge>
+                  </div>
+                  <Badge>By Sarah Thompson</Badge>
+                </div>
+                <CardTitle>Online courses</CardTitle>
+                <CardDescription>
+                  Discover the fundamentals of graphic design, including
+                  typography, color theory, layout design, and image
+                  manipulation techniques. Create visually stunning designs for
+                  print and digital media.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="bg-themePrimary w-full">
+                  <Link href={"/"}>Get It Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Image
+                  src={"/img/section-04-img-5.png"}
+                  alt="Card Image"
+                  width={100}
+                  height={100}
+                  className="w-full h-full"
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3">
+                    <Badge>10 Weeks</Badge>
+                    <Badge>Intermediate</Badge>
+                  </div>
+                  <Badge>By Othmane Alaoui</Badge>
+                </div>
+                <CardTitle>Digital downloads</CardTitle>
+                <CardDescription>
+                  Become proficient in front-end web development. Learn HTML,
+                  CSS, JavaScript, and popular frameworks like Bootstrap and
+                  React. Build interactive and responsive websites.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="bg-themePrimary w-full">
+                  <Link href={"/"}>Get It Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Image
+                  src={"/img/section-04-img-6.png"}
+                  alt="Card Image"
+                  width={100}
+                  height={100}
+                  className="w-full h-full"
+                />
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3">
+                    <Badge>6 Weeks</Badge>
+                    <Badge>Advance</Badge>
+                  </div>
+                  <Badge>By Aziza ammelah</Badge>
+                </div>
+                <CardTitle>Coaching</CardTitle>
+                <CardDescription>
+                  Take your JavaScript skills to the next level. Explore
+                  advanced concepts like closures, prototypes, asynchronous
+                  programming, and ES6 features. Build complex applications with
+                  confidence.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="bg-themePrimary w-full">
+                  <Link href={"/"}>Get It Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
           </div>
         </section>
       </main>
