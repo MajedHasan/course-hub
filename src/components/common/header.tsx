@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -21,11 +19,24 @@ import {
 } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
 import { Separator } from "../ui/separator";
+import { currentUser } from "@clerk/nextjs/server";
+import { SignOutButton } from "@clerk/nextjs";
 
 type Props = {};
 
-const Header = (props: Props) => {
-  const [user, setUser] = useState(true);
+const Header = async (props: Props) => {
+  const user = await currentUser();
+
+  let dashboard = "users";
+  if (user?.publicMetadata.role === "ADMIN") {
+    dashboard = "admin";
+  } else if (user?.publicMetadata.role === "TEACHER") {
+    dashboard = "teacher";
+  } else if (user?.publicMetadata.role === "STUDENT") {
+    dashboard = "student";
+  }
+
+  console.log("From User: ", user);
 
   return (
     <div className="py-3">
@@ -89,18 +100,23 @@ const Header = (props: Props) => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Avatar>
-                    <AvatarImage src="" alt="Profile Pic" />
-                    <AvatarFallback>Profile</AvatarFallback>
+                    <AvatarImage src={user.profileImageUrl} alt="Profile Pic" />
+                    <AvatarFallback>
+                      {user.emailAddresses[0].emailAddress}
+                    </AvatarFallback>
                   </Avatar>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56">
                   <DropdownMenuGroup>
-                    <Link href={`student.${process.env.NEXT_PUBLIC_DOMAIN}`}>
-                      <DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link
+                        href={`${process.env.NEXT_PUBLIC_DOMAIN}/${dashboard}`}
+                        className="cursor-pointer flex w-full"
+                      >
                         <User className="mr-2 h-4 w-4" />
                         <span>Dashboard</span>
-                      </DropdownMenuItem>
-                    </Link>
+                      </Link>
+                    </DropdownMenuItem>
                     <DropdownMenuItem>
                       <MessageCircle className="mr-2 h-4 w-4" />
                       <span>Messages</span>
@@ -112,8 +128,12 @@ const Header = (props: Props) => {
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <LogOut className="mr-2 h-4 w-4" />
-                    <span>Log out</span>
+                    <SignOutButton>
+                      <div className="flex">
+                        <LogOut className="mr-2 h-4 w-4" />
+                        <span>Log out</span>
+                      </div>
+                    </SignOutButton>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -121,10 +141,10 @@ const Header = (props: Props) => {
           ) : (
             <div className="flex items-center gap-2">
               <Button asChild variant={"link"}>
-                <Link href={"/signup"}>Sign Up</Link>
+                <Link href={"/site/sign-up"}>Sign Up</Link>
               </Button>
               <Button asChild variant={"default"}>
-                <Link href={"/login"}>Login</Link>
+                <Link href={"/site/sign-in"}>Login</Link>
               </Button>
             </div>
           )}
