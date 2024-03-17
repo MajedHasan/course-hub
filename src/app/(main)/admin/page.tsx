@@ -67,7 +67,7 @@ const Dashboard = (props: Props) => {
   if (isMounted) return;
 
   return (
-    <section className="py-5">
+    <section className="py-2">
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
         <Card>
           <CardHeader className="flex items-center flex-row justify-between">
