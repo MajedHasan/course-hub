@@ -13,6 +13,13 @@ import {
   Magnet,
   Mailbox,
   BookCopyIcon,
+  Home,
+  BookOpen,
+  PieChart,
+  BarChart3,
+  Folders,
+  Settings,
+  MessageCircleMore,
 } from "lucide-react";
 import { SidebarItem } from "./types";
 
@@ -71,5 +78,45 @@ export const AdminSidebarItems: SidebarItem[] = [
     name: "Blogs",
     url: "/blogs",
     icon: BookCopyIcon,
+  },
+];
+
+export const StudentSidebarItems: SidebarItem[] = [
+  {
+    name: "Dashboard",
+    url: "/",
+    icon: Home,
+  },
+  {
+    name: "Courses",
+    url: "/courses",
+    icon: BookOpen,
+  },
+  {
+    name: "Affiliate",
+    url: "/affiliate",
+    icon: PieChart,
+  },
+  {
+    name: "Online Coaching",
+    url: "/online-coaching",
+    icon: BarChart3,
+  },
+  {
+    name: "Digital Files",
+    url: "/digital-files",
+    icon: Folders,
+  },
+];
+export const StudentSidebarItems2: SidebarItem[] = [
+  {
+    name: "Messages",
+    url: "/messages",
+    icon: MessageCircleMore,
+  },
+  {
+    name: "Settings",
+    url: "/settings",
+    icon: Settings,
   },
 ];
