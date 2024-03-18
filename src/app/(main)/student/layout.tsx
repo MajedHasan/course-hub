@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { BarChart, NewspaperIcon, PlusCircle } from "lucide-react";
 import Link from "next/link";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const StudentLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <main className="w-full min-h-screen h-full bg-[#F0F2F5] flex">
@@ -56,4 +56,4 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Layout;
+export default StudentLayout;
