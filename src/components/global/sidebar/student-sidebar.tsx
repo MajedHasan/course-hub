@@ -21,7 +21,7 @@ const StudentSidebar = async (props: Props) => {
   const user = await currentUser();
 
   return (
-    <div className="flex flex-col gap-5 justify-between h-full p-3">
+    <aside className="flex flex-col gap-5 justify-between h-full p-3">
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-3 pl-4">
           <div className="w-7 h-7 rounded-full bg-themeStudentPrimary"></div>
@@ -102,7 +102,7 @@ const StudentSidebar = async (props: Props) => {
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </aside>
   );
 };
 
