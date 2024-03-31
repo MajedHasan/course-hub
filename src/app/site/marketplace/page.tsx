@@ -2,8 +2,8 @@ import React from "react";
 
 type Props = {};
 
-const Marketplace = (props: Props) => {
+const MarketplacePage = (props: Props) => {
   return <div>Marketplace</div>;
 };
 
-export default Marketplace;
+export default MarketplacePage;

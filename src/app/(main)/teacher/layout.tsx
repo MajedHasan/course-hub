@@ -27,10 +27,10 @@ const TeacherLayout = ({ children }: { children: React.ReactNode }) => {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <Link href={"/notification"}>
+              <Link href={"/teacher/notification"}>
                 <Bell className="text-[#8B8C8C]" />
               </Link>
-              <Link href={"/settings"}>
+              <Link href={"/teacher/settings"}>
                 <Settings className="text-[#8B8C8C]" />
               </Link>
               <div className="pl-4">

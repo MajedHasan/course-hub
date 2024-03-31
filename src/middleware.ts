@@ -39,6 +39,38 @@ export default authMiddleware({
     ) {
       return NextResponse.rewrite(new URL("/site", req.url));
     }
+
+    // ================== For Marketplace Page
+    if (
+      url.pathname === "/marketplace" &&
+      url.host === process.env.NEXT_PUBLIC_DOMAIN
+    ) {
+      return NextResponse.rewrite(new URL("/site/marketplace", req.url));
+    }
+
+    // ================== For Contact Page
+    if (
+      url.pathname === "/contact" &&
+      url.host === process.env.NEXT_PUBLIC_DOMAIN
+    ) {
+      return NextResponse.rewrite(new URL("/site/contact", req.url));
+    }
+
+    // ================== For About Us Page
+    if (
+      url.pathname === "/about-us" &&
+      url.host === process.env.NEXT_PUBLIC_DOMAIN
+    ) {
+      return NextResponse.rewrite(new URL("/site/about-us", req.url));
+    }
+
+    // ================== For Pricing Page
+    if (
+      url.pathname === "/pricing" &&
+      url.host === process.env.NEXT_PUBLIC_DOMAIN
+    ) {
+      return NextResponse.rewrite(new URL("/site/pricing", req.url));
+    }
   },
 });
 

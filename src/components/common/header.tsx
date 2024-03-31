@@ -64,6 +64,9 @@ const Header = async (props: Props) => {
                   <Link href={"/"} className="hover:text-slate-400">
                     Home
                   </Link>
+                  <Link href={"/marketplace"} className="hover:text-slate-400">
+                    Courses
+                  </Link>
                   <Link href={"/about-us"} className="hover:text-slate-400">
                     About Us
                   </Link>
@@ -83,6 +86,9 @@ const Header = async (props: Props) => {
             <nav className="md:flex items-center gap-6 hidden">
               <Link href={"/"} className="hover:text-slate-400">
                 Home
+              </Link>
+              <Link href={"/marketplace"} className="hover:text-slate-400">
+                Courses
               </Link>
               <Link href={"/about-us"} className="hover:text-slate-400">
                 About Us

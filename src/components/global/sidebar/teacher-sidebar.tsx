@@ -29,7 +29,7 @@ const TeacherSidebar = (props: Props) => {
             {TeacherSidebarItems.map((item) => (
               <Link
                 key={item.name}
-                href={`/admin${item.url}`}
+                href={`/teacher${item.url}`}
                 className="w-full py-3 hover:bg-themeTeacherPrimary transition-all rounded-lg pl-4 group flex items-center gap-3 "
               >
                 {
