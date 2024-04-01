@@ -33,13 +33,6 @@ export default authMiddleware({
       return NextResponse.redirect(new URL(`/site/sign-in`, req.url));
     }
 
-    if (
-      url.pathname === "/" ||
-      (url.pathname === "/site" && url.host === process.env.NEXT_PUBLIC_DOMAIN)
-    ) {
-      return NextResponse.rewrite(new URL("/site", req.url));
-    }
-
     // ================== For Marketplace Page
     if (
       url.pathname === "/marketplace" &&
@@ -70,6 +63,14 @@ export default authMiddleware({
       url.host === process.env.NEXT_PUBLIC_DOMAIN
     ) {
       return NextResponse.rewrite(new URL("/site/pricing", req.url));
+    }
+
+    // ================== For Home Page
+    if (
+      url.pathname === "/" ||
+      (url.pathname === "/site" && url.host === process.env.NEXT_PUBLIC_DOMAIN)
+    ) {
+      return NextResponse.rewrite(new URL("/site", req.url));
     }
   },
 });
