@@ -28,27 +28,183 @@ export default function Home() {
               Potential
             </h1>
           </div>
-          <p className="text-center mt-5 max-w-[550px] w-full mx-auto">
-            Learn from Industry Experts and Enhance Your Skills & Share what you
-            know{";"} we{"'"}ll help you get paid for it
+          <p className="text-center mt-5 max-w-[660px] w-full mx-auto">
+            Learn from industry experts and enhance your skills. Share your
+            expertise, and we&apos;ll assist you in monetizing it. Whether you
+            &apos; re an experienced teacher or an enthusiastic student, embark
+            on your journey now
           </p>
           <div className="flex md:flex-row flex-col items-center gap-6 justify-center mt-8">
-            <Button asChild size={"lg"}>
-              <Link href={""}>Explore Sevices</Link>
-            </Button>
-            <Button asChild size={"lg"} className="bg-themePrimary">
-              <Link href={""}>View Pricing</Link>
+            <Button
+              asChild
+              size={"lg"}
+              className="bg-gradient-to-r from-[#775B16] from-10% via-[#EFB41F] via-60% to-[#EFB41F] to-90% rounded-2xl font-bold text-lg py-7 px-10"
+            >
+              <Link href={""}>Create Account</Link>
             </Button>
           </div>
         </section>
         <section className="container mx-auto">
-          <video
-            src="https://www.pexels.com/video/online-courses-list-5900947/"
-            controls
-            poster="/img/section-02-thumbnail.png"
-            className="w-full h-full max-h-[600px]"
-          ></video>
+          <Image
+            src="/img/section-02-thumbnail.png"
+            alt="preview img"
+            width={1000}
+            height={1000}
+            className="w-full h-full"
+          />
         </section>
+
+        <section className="container mx-auto md:my-20 my-8 grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+          <div className="text-center">
+            <h2 className="lg:text-7xl text-3xl font-light bg-gradient-to-r from-themePrimary via-themePrimary to-slate-800 inline-block text-transparent bg-clip-text">
+              15K+
+            </h2>
+            <p className="lg:text-lg text-sm">Students</p>
+          </div>
+          <div className="text-center">
+            <h2 className="lg:text-7xl text-3xl font-light bg-gradient-to-r from-themePrimary via-themePrimary to-slate-800 inline-block text-transparent bg-clip-text">
+              75%
+            </h2>
+            <p className="lg:text-lg text-sm">Total success</p>
+          </div>
+          <div className="text-center">
+            <h2 className="lg:text-7xl text-3xl font-light bg-gradient-to-r from-themePrimary via-themePrimary to-slate-800 inline-block text-transparent bg-clip-text">
+              35
+            </h2>
+            <p className="lg:text-lg text-sm">Main questions</p>
+          </div>
+          <div className="text-center">
+            <h2 className="lg:text-7xl text-3xl font-light bg-gradient-to-r from-themePrimary via-themePrimary to-slate-800 inline-block text-transparent bg-clip-text">
+              26
+            </h2>
+            <p className="lg:text-lg text-sm">Chief experts</p>
+          </div>
+          <div className="text-center">
+            <h2 className="lg:text-7xl text-3xl font-light bg-gradient-to-r from-themePrimary via-themePrimary to-slate-800 inline-block text-transparent bg-clip-text">
+              16
+            </h2>
+            <p className="lg:text-lg text-sm">Years of experience</p>
+          </div>
+        </section>
+
+        <section className="container mx-auto md:my-20 my-8 gap-10">
+          <div className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl">
+            Road Map
+          </div>
+          <div className="text-center mt-16 max-w-lg mx-auto w-full">
+            <h2 className="text-[#2F327D] md:text-3xl text-xl font-semibold mb-3">
+              All-In-One{" "}
+              <span className="text-themePrimary">Cloud Software.</span>
+            </h2>
+            <p className="text-[#696984]">
+              Course creator hub is one powerful online software suite that
+              combines all the tools needed to run a successful school or
+              office.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-14 lg:px-24 mt-24">
+            <div className="rounded-xl shadow-xl bg-slate-50 py-10 px-12 text-center relative">
+              <div className="absolute -top-10 left-[40%] rounded-full  w-[70px] h-[70px] bg-[#5B72EE] flex items-center justify-center">
+                <Image
+                  src="/img/section-04-img-01.png"
+                  alt="Image 01"
+                  width={20}
+                  height={20}
+                />
+              </div>
+              <h2 className="text-[#2F327D] text-2xl mb-5 pt-16">
+                Online Billing, Invoicing, & Contracts
+              </h2>
+              <p className="text-[#696984]">
+                Simple and secure control of your organization’s financial and
+                legal transactions. Send customized invoices and contracts
+              </p>
+            </div>
+            <div className="rounded-xl shadow-xl bg-slate-50 py-10 px-12 text-center relative">
+              <div className="absolute -top-10 left-[40%] rounded-full  w-[70px] h-[70px] bg-[#DAA520] flex items-center justify-center">
+                <Image
+                  src="/img/section-04-img-02.png"
+                  alt="Image 01"
+                  width={25}
+                  height={25}
+                />
+              </div>
+              <h2 className="text-[#2F327D] text-2xl mb-5 pt-16">
+                Easy Scheduling & Attendance Tracking
+              </h2>
+              <p className="text-[#696984]">
+                Schedule and reserve classrooms at one campus or multiple
+                campuses. Keep detailed records of student attendance
+              </p>
+            </div>
+            <div className="rounded-xl shadow-xl bg-slate-50 py-10 px-12 text-center relative">
+              <div className="absolute -top-10 left-[40%] rounded-full  w-[70px] h-[70px] bg-[#29B9E7] flex items-center justify-center">
+                <Image
+                  src="/img/section-04-img-03.png"
+                  alt="Image 01"
+                  width={35}
+                  height={35}
+                />
+              </div>
+              <h2 className="text-[#2F327D] text-2xl mb-5 pt-16">
+                Customer Tracking
+              </h2>
+              <p className="text-[#696984]">
+                Automate and track emails to individuals or groups. Skilline’s
+                built-in system helps organize your organization
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="container mx-auto md:my-20 my-8 gap-10">
+          <div className="text-center mt-16 max-w-2xl mx-auto w-full">
+            <h2 className="text-[#2F327D] md:text-3xl text-xl font-semibold mb-3">
+              What is{" "}
+              <span className="text-themePrimary font-light">
+                Course creator hub
+              </span>
+            </h2>
+            <p className="text-[#696984]">
+              Course creator hub is a platform that allows educators to create
+              online classes and courses whereby they can store the course
+              materials online; manage assignments, quizzes and exams; monitor
+              due dates; grade results and provide students with feedback all in
+              one place.
+            </p>
+          </div>
+          <div className="lg:px-20 grid lg:grid-cols-2 grid-cols-1 gap-10 mt-10">
+            <div className="rounded-lg bg-[url('/img/section-05-img-01.png')] bg-cover bg-center overflow-hidden">
+              <div className="h-[300px] w-full flex items-center justify-center flex-col gap-4 bg-[#171B41]/50 text-slate-50">
+                <h2 className="font-semibold">FOR INSTRUCTORS</h2>
+                <Button
+                  asChild
+                  variant={"ghost"}
+                  className="border border-slate-50 rounded-full px-8 py-6"
+                >
+                  <Link href={""} className="font-light">
+                    Start a class today
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="rounded-lg bg-[url('/img/section-05-img-02.png')] bg-cover bg-center overflow-hidden">
+              <div className="h-[300px] w-full flex items-center justify-center flex-col gap-4 bg-[#171B41]/50 text-slate-50">
+                <h2 className="font-semibold">FOR STUDENTS</h2>
+                <Button
+                  asChild
+                  variant={"ghost"}
+                  className="rounded-full bg-[#23BDEE] px-8 py-6"
+                >
+                  <Link href={""} className="font-light">
+                    Enter access code
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="container mx-auto md:my-20 my-8">
           <div className="flex items-center justify-between gap-10 mb-10">
             <h2 className="md:text-3xl text-xl font-medium">Benefits</h2>
