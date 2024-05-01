@@ -10,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,6 +17,7 @@ export default function Home() {
   return (
     <>
       <main className="py-10 bg-[url('/img/home-page-bg.png')] bg-[no-repeat] bg-[center center] bg-[cover]">
+        {/* Section 01 */}
         <section className="container mx-auto md:py-24 py-10">
           <div className="bg-[#FCFCFD] rounded md:p-5 p-2 max-w-fit w-full mx-auto flex items-center gap-5">
             <div className="bg-[#FAE3C3] rounded md:p-3 p-1">
@@ -44,6 +44,7 @@ export default function Home() {
             </Button>
           </div>
         </section>
+        {/* Section 02 */}
         <section className="container mx-auto">
           <Image
             src="/img/section-02-thumbnail.png"
@@ -53,7 +54,7 @@ export default function Home() {
             className="w-full h-full"
           />
         </section>
-
+        {/* Section 03 */}
         <section className="container mx-auto md:my-20 my-8 grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
           <div className="text-center">
             <h2 className="lg:text-7xl text-3xl font-light bg-gradient-to-r from-themePrimary via-themePrimary to-slate-800 inline-block text-transparent bg-clip-text">
@@ -86,11 +87,17 @@ export default function Home() {
             <p className="lg:text-lg text-sm">Years of experience</p>
           </div>
         </section>
-
-        <section className="container mx-auto md:my-20 my-8 gap-10">
-          <div className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl">
+        {/* Section 04 */}
+        <section className="container mx-auto md:my-20 my-8">
+          {/* <div className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl">
             Road Map
-          </div>
+          </div> */}
+          <Link
+            href={"/road-map"}
+            className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl block"
+          >
+            Road Map
+          </Link>
           <div className="text-center mt-16 max-w-lg mx-auto w-full">
             <h2 className="text-[#2F327D] md:text-3xl text-xl font-semibold mb-3">
               All-In-One{" "}
@@ -156,8 +163,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="container mx-auto md:my-20 my-8 gap-10">
+        {/* Section 05 */}
+        <section className="container mx-auto md:my-20 my-8">
           <div className="text-center mt-16 max-w-2xl mx-auto w-full">
             <h2 className="text-[#2F327D] md:text-3xl text-xl font-semibold mb-3">
               What is{" "}
@@ -204,417 +211,41 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Section 06 */}
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="flex gap-10 md:flex-row flex-col items-center">
+            <div className="flex-1">
+              <h2 className="md:text-3xl text-xl relative z-30">
+                <span className="absolute block w-10 h-10 rounded-full bg-[#DAA520] z-20 -top-4 -left-4"></span>
+                <span className="relative z-30">
+                  Everything you can do in a physical classroom,{" "}
+                  <span className="text-[#DAA520]">you can do with </span>
+                  Course creator hub
+                </span>
+              </h2>
+              <p className="text-[#696984] mt-4 mb-8">
+                Course creator hubs school management software helps traditional
+                and online schools manage scheduling, attendance, payments and
+                virtual classrooms all in one secure cloud-based system.
+              </p>
+              <Link href={"/"} className="underline italic">
+                Learn more...
+              </Link>
+            </div>
+            <div className="flex-1">
+              <Image
+                src={"/img/section-06-img.png"}
+                alt="Section 06 Image"
+                width={500}
+                height={500}
+              />
+            </div>
+          </div>
+        </section>
 
-        <section className="container mx-auto md:my-20 my-8">
-          <div className="flex items-center justify-between gap-10 mb-10">
-            <h2 className="md:text-3xl text-xl font-medium">Benefits</h2>
-            <Button asChild variant={"secondary"}>
-              <Link href={"/"}>View All</Link>
-            </Button>
-          </div>
-          <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
-            <div className="rounded-lg bg-white md:py-10 py-7 md:px-10 px-6 flex flex-col gap-3 justify-between">
-              <h2 className="md:text-6xl text-3xl font-bold text-right">01</h2>
-              <p className="font-bold text-left">Flexible Learning Schedule</p>
-              <p className="mb-10 text-sm">
-                Fit your coursework around your existing commitments and
-                obligations.
-              </p>
-              <Button asChild className="bg-secondary ml-auto">
-                <Link href={"/"}>
-                  <ArrowUpRight size={20} className="text-themePrimary" />
-                </Link>
-              </Button>
-            </div>
-            <div className="rounded-lg bg-white md:py-10 py-7 md:px-10 px-6 flex flex-col gap-3 justify-between">
-              <h2 className="md:text-6xl text-3xl font-bold text-right">02</h2>
-              <p className="font-bold text-left">Expert Instruction</p>
-              <p className="mb-10 text-sm">
-                Learn from industry experts who have hands-on experience in
-                design and development.
-              </p>
-              <Button asChild className="bg-secondary ml-auto">
-                <Link href={"/"}>
-                  <ArrowUpRight size={20} className="text-themePrimary" />
-                </Link>
-              </Button>
-            </div>
-            <div className="rounded-lg bg-white md:py-10 py-7 md:px-10 px-6 flex flex-col gap-3 justify-between">
-              <h2 className="md:text-6xl text-3xl font-bold text-right">03</h2>
-              <p className="font-bold text-left">Diverse Course Offerings</p>
-              <p className="mb-10 text-sm">
-                Explore a wide range of design and development courses covering
-                various topics.
-              </p>
-              <Button asChild className="bg-secondary ml-auto">
-                <Link href={"/"}>
-                  <ArrowUpRight size={20} className="text-themePrimary" />
-                </Link>
-              </Button>
-            </div>
-            <div className="rounded-lg bg-white md:py-10 py-7 md:px-10 px-6 flex flex-col gap-3 justify-between">
-              <h2 className="md:text-6xl text-3xl font-bold text-right">04</h2>
-              <p className="font-bold text-left">Updated Curriculum</p>
-              <p className="mb-10 text-sm">
-                Access courses with up-to-date content reflecting the latest
-                trends and industry practices.
-              </p>
-              <Button asChild className="bg-secondary ml-auto">
-                <Link href={"/"}>
-                  <ArrowUpRight size={20} className="text-themePrimary" />
-                </Link>
-              </Button>
-            </div>
-            <div className="rounded-lg bg-white md:py-10 py-7 md:px-10 px-6 flex flex-col gap-3 justify-between">
-              <h2 className="md:text-6xl text-3xl font-bold text-right">05</h2>
-              <p className="font-bold text-left">
-                Practical Projects and Assignments
-              </p>
-              <p className="mb-10 text-sm">
-                Develop a portfolio showcasing your skills and abilities to
-                potential employers.
-              </p>
-              <Button asChild className="bg-secondary ml-auto">
-                <Link href={"/"}>
-                  <ArrowUpRight size={20} className="text-themePrimary" />
-                </Link>
-              </Button>
-            </div>
-            <div className="rounded-lg bg-white md:py-10 py-7 md:px-10 px-6 flex flex-col gap-3 justify-between">
-              <h2 className="md:text-6xl text-3xl font-bold text-right">06</h2>
-              <p className="font-bold text-left">
-                Interactive Learning Environment
-              </p>
-              <p className="mb-10 text-sm">
-                Collaborate with fellow learners, exchanging ideas and feedback
-                to enhance your understanding.
-              </p>
-              <Button asChild className="bg-secondary ml-auto">
-                <Link href={"/"}>
-                  <ArrowUpRight size={20} className="text-themePrimary" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-        <section className="container mx-auto md:my-20 my-8">
-          <div className="flex items-center justify-between gap-10 mb-10">
-            <h2 className="md:text-3xl text-xl font-medium">
-              Services Overview
-            </h2>
-            <Button asChild variant={"secondary"}>
-              <Link href={"/"}>View All</Link>
-            </Button>
-          </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-4 bg-[#FEFCF5] p-5 rounded-lg">
-            <Card>
-              <CardHeader>
-                <Image
-                  src={"/img/section-04-img-1.png"}
-                  alt="Card Image"
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </CardHeader>
-              <CardContent>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-3">
-                    <Badge>4 Weeks</Badge>
-                    <Badge>Beginner</Badge>
-                  </div>
-                  <Badge>By Anas Moudnib</Badge>
-                </div>
-                <CardTitle>Online courses</CardTitle>
-                <CardDescription>
-                  Our intuitive course builder gives you the power to share what
-                  you know. No coding or design skills necessary.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-themePrimary w-full">
-                  <Link href={"/"}>Get It Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Image
-                  src={"/img/section-04-img-2.png"}
-                  alt="Card Image"
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </CardHeader>
-              <CardContent>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-3">
-                    <Badge>6 Weeks</Badge>
-                    <Badge>Intermediate</Badge>
-                  </div>
-                  <Badge>By Othmane Alaoui</Badge>
-                </div>
-                <CardTitle>Digital downloads</CardTitle>
-                <CardDescription>
-                  Reach your audience with the content they want, faster than
-                  ever. Sell PDFs, audio clips, and more.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-themePrimary w-full">
-                  <Link href={"/"}>Get It Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Image
-                  src={"/img/section-04-img-3.png"}
-                  alt="Card Image"
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </CardHeader>
-              <CardContent>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-3">
-                    <Badge>8 Weeks</Badge>
-                    <Badge>Intermediate</Badge>
-                  </div>
-                  <Badge>By Salima Zarouali</Badge>
-                </div>
-                <CardTitle>Coaching</CardTitle>
-                <CardDescription>
-                  Dive into the world of mobile app development. Learn to build
-                  native iOS and Android applications using industry-leading
-                  frameworks like Swift and Kotlin.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-themePrimary w-full">
-                  <Link href={"/"}>Get It Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Image
-                  src={"/img/section-04-img-4.png"}
-                  alt="Card Image"
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </CardHeader>
-              <CardContent>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-3">
-                    <Badge>10 Weeks</Badge>
-                    <Badge>Beginner</Badge>
-                  </div>
-                  <Badge>By Sarah Thompson</Badge>
-                </div>
-                <CardTitle>Online courses</CardTitle>
-                <CardDescription>
-                  Discover the fundamentals of graphic design, including
-                  typography, color theory, layout design, and image
-                  manipulation techniques. Create visually stunning designs for
-                  print and digital media.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-themePrimary w-full">
-                  <Link href={"/"}>Get It Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Image
-                  src={"/img/section-04-img-5.png"}
-                  alt="Card Image"
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </CardHeader>
-              <CardContent>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-3">
-                    <Badge>10 Weeks</Badge>
-                    <Badge>Intermediate</Badge>
-                  </div>
-                  <Badge>By Othmane Alaoui</Badge>
-                </div>
-                <CardTitle>Digital downloads</CardTitle>
-                <CardDescription>
-                  Become proficient in front-end web development. Learn HTML,
-                  CSS, JavaScript, and popular frameworks like Bootstrap and
-                  React. Build interactive and responsive websites.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-themePrimary w-full">
-                  <Link href={"/"}>Get It Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <Image
-                  src={"/img/section-04-img-6.png"}
-                  alt="Card Image"
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                />
-              </CardHeader>
-              <CardContent>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-3">
-                    <Badge>6 Weeks</Badge>
-                    <Badge>Advance</Badge>
-                  </div>
-                  <Badge>By Aziza ammelah</Badge>
-                </div>
-                <CardTitle>Coaching</CardTitle>
-                <CardDescription>
-                  Take your JavaScript skills to the next level. Explore
-                  advanced concepts like closures, prototypes, asynchronous
-                  programming, and ES6 features. Build complex applications with
-                  confidence.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-themePrimary w-full">
-                  <Link href={"/"}>Get It Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-        </section>
-        <section className="container mx-auto md:my-20 my-8">
-          <div className="flex items-center justify-between gap-10 mb-10">
-            <h2 className="md:text-3xl text-xl font-medium">
-              Our Testimonials
-            </h2>
-            <Button asChild variant={"secondary"}>
-              <Link href={"/"}>View All</Link>
-            </Button>
-          </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
-            <Card>
-              <CardHeader>
-                <CardDescription className="mb-6">
-                  The web design course provided a solid foundation for me. The
-                  instructors were knowledgeable and supportive, and the
-                  interactive learning environment was engaging. I highly
-                  recommend it!
-                </CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <div className="flex items-center justify-between w-full">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={"/img/testimonial-img-1.png"}
-                      alt=""
-                      width={35}
-                      height={35}
-                      className="rounded"
-                    />
-                    <span className="font-bold text-sm">Sarah L</span>
-                  </div>
-                  <Button asChild variant={"secondary"}>
-                    <Link href={"/"}>Read Full Story</Link>
-                  </Button>
-                </div>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardDescription className="mb-6">
-                  The UI/UX design course exceeded my expectations. The
-                  instructor{"'"}s expertise and practical assignments helped me
-                  improve my design skills. I feel more confident in my career
-                  now. Thank you!
-                </CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <div className="flex items-center justify-between w-full">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={"/img/testimonial-img-1.png"}
-                      alt=""
-                      width={35}
-                      height={35}
-                      className="rounded"
-                    />
-                    <span className="font-bold text-sm">yassine</span>
-                  </div>
-                  <Button asChild variant={"secondary"}>
-                    <Link href={"/"}>Read Full Story</Link>
-                  </Button>
-                </div>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardDescription className="mb-6">
-                  The mobile app development course was fantastic! The
-                  step-by-step tutorials and hands-on projects helped me grasp
-                  the concepts easily. I{"'"}m now building my own app. Great
-                  course!
-                </CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <div className="flex items-center justify-between w-full">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={"/img/testimonial-img-1.png"}
-                      alt=""
-                      width={35}
-                      height={35}
-                      className="rounded"
-                    />
-                    <span className="font-bold text-sm">Aziza </span>
-                  </div>
-                  <Button asChild variant={"secondary"}>
-                    <Link href={"/"}>Read Full Story</Link>
-                  </Button>
-                </div>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardDescription className="mb-6">
-                  I enrolled in the graphic design course as a beginner, and it
-                  was the perfect starting point. The instructor{"'"}s guidance
-                  and feedback improved my design abilities significantly. I
-                  {"'"}m grateful for this course!
-                </CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <div className="flex items-center justify-between w-full">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={"/img/testimonial-img-1.png"}
-                      alt=""
-                      width={35}
-                      height={35}
-                      className="rounded"
-                    />
-                    <span className="font-bold text-sm">Salim</span>
-                  </div>
-                  <Button asChild variant={"secondary"}>
-                    <Link href={"/"}>Read Full Story</Link>
-                  </Button>
-                </div>
-              </CardFooter>
-            </Card>
-          </div>
-        </section>
+        {/* Section 07 */}
+        <section className="container mx-auto md:my-20 my-8"></section>
+
         <NewsLetter />
       </main>
     </>

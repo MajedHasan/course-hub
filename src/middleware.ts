@@ -65,6 +65,14 @@ export default authMiddleware({
       return NextResponse.rewrite(new URL("/site/pricing", req.url));
     }
 
+    // ================== For Pricing Page
+    if (
+      url.pathname === "/road-map" &&
+      url.host === process.env.NEXT_PUBLIC_DOMAIN
+    ) {
+      return NextResponse.rewrite(new URL("/site/road-map", req.url));
+    }
+
     // ================== For Home Page
     if (
       url.pathname === "/" ||
