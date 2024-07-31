@@ -38,7 +38,7 @@ export default function Home() {
             <Button
               asChild
               size={"lg"}
-              className="bg-gradient-to-r from-[#775B16] from-10% via-[#EFB41F] via-60% to-[#EFB41F] to-90% rounded-2xl font-bold text-lg py-7 px-10"
+              className="bg-gradient-to-r from-[#775B16] from-10% via-[#EFB41F] via-60% to-[#EFB41F] to-90% hover:from-[#EFB41F] hover:to-[#775B16] rounded-2xl font-bold text-lg py-7 px-10 transition-all shadow-xl"
             >
               <Link href={""}>Create Account</Link>
             </Button>
@@ -94,7 +94,7 @@ export default function Home() {
           </div> */}
           <Link
             href={"/road-map"}
-            className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl block"
+            className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl block hover:bg-themePrimary hover:text-slate-50"
           >
             Road Map
           </Link>
@@ -244,7 +244,82 @@ export default function Home() {
         </section>
 
         {/* Section 07 */}
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="text-center">
+            <h2 className="md:text-3xl text-xl font-bold text-[#2F327D]">
+              Our <span className="text-[#DAA520]">Features</span>
+            </h2>
+            <p className="text-[#696984] mt-3">
+              This very extraordinary feature, can make learning activities more
+              efficient
+            </p>
+          </div>
+          <div className="flex md:flex-row flex-col lg:gap-20 md:gap-10 gap-4 items-center justify-between mt-10">
+            <div className="flex-1">
+              <Image
+                src={"/img/section-07-img.png"}
+                alt="Section 06 Image"
+                width={500}
+                height={500}
+                className="w-full"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="lg:text-3xl md:text-2xl text-xl font-bold">
+                Why you’ll start teaching on <br />{" "}
+                <span className="font-normal text-themePrimary">
+                  Course creator hub{" "}
+                </span>
+              </h2>
+              <ul className="max-w-md flex flex-col gap-6 mt-8">
+                <li className="flex items-center gap-5">
+                  <span className="rounded-full p-4 shadow bg-white flex items-center justify-center">
+                    <Image
+                      src={"/img/section-07-icon-01.png"}
+                      alt="Icon"
+                      width={25}
+                      height={25}
+                    />
+                  </span>
+                  <p className="text-[#696984]">
+                    we provide a plateform for you to present your courses
+                  </p>
+                </li>
+                <li className="flex items-center gap-5">
+                  <span className="rounded-full p-4 shadow bg-white flex items-center justify-center">
+                    <Image
+                      src={"/img/section-07-icon-02.png"}
+                      alt="Icon"
+                      width={25}
+                      height={25}
+                    />
+                  </span>
+                  <p className="text-[#696984]">
+                    we help you with providing marketing strategies
+                  </p>
+                </li>
+                <li className="flex items-center gap-5">
+                  <span className="rounded-full p-4 shadow bg-white flex items-center justify-center">
+                    <Image
+                      src={"/img/section-07-icon-03.png"}
+                      alt="Icon"
+                      width={25}
+                      height={25}
+                    />
+                  </span>
+                  <p className="text-[#696984]">
+                    Teachers can easily see all students and class data at one
+                    time.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 08 */}
         <section className="container mx-auto md:my-20 my-8"></section>
+        {/* Section 08 */}
 
         <NewsLetter />
       </main>
