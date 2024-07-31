@@ -372,6 +372,34 @@ export default function Home() {
         </section>
         {/* Section 09 */}
 
+        {/* Section 10 */}
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2 grid-cols-1">
+            <div className="flex-1 w-full">
+              <h2 className="md:text-3xl text-xl font-bold text-[#2F327D]">
+                <span className="text-[#DAA520]">Class Management</span>
+                <br />
+                Tools for Educators
+              </h2>
+              <p className="text-[#696984] mt-8 max-w-md leading-7">
+                Class provides tools to help run and manage the class such as
+                Class Roster, Attendance, and more. With the Gradebook, teachers
+                can review and grade tests and quizzes in real-time.
+              </p>
+            </div>
+            <div className="flex-1 w-full">
+              <Image
+                src={"/img/section-10-img.png"}
+                alt="Course Creation Hub"
+                width={400}
+                height={400}
+                className="w-full"
+              />
+            </div>
+          </div>
+        </section>
+        {/* Section 10 */}
+
         <NewsLetter />
       </main>
     </>
