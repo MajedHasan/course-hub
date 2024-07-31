@@ -344,6 +344,34 @@ export default function Home() {
         </section>
         {/* Section 08 */}
 
+        {/* Section 09 */}
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2 grid-cols-1">
+            <div className="flex-1 w-full">
+              <Image
+                src={"/img/section-09-img.png"}
+                alt="Course Creation Hub"
+                width={400}
+                height={400}
+                className="w-full"
+              />
+            </div>
+            <div className="flex-1 w-full">
+              <h2 className="md:text-3xl text-xl font-bold text-[#2F327D]">
+                Assessments,
+                <br />
+                <span className="text-[#DAA520]">Quizzes,</span>
+                Tests
+              </h2>
+              <p className="text-[#696984] mt-8 max-w-md leading-7">
+                Easily launch live assignments, quizzes, and tests. Student
+                results are automatically entered in the online gradebook.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Section 09 */}
+
         <NewsLetter />
       </main>
     </>
