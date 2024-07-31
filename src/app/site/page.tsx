@@ -400,6 +400,36 @@ export default function Home() {
         </section>
         {/* Section 10 */}
 
+        {/* Section 11 */}
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2 grid-cols-1">
+            <div className="flex-1 w-full">
+              <Image
+                src={"/img/section-11-img.png"}
+                alt="Course Creation Hub"
+                width={400}
+                height={400}
+                className="w-full"
+              />
+            </div>
+            <div className="flex-1 w-full">
+              <h2 className="md:text-3xl text-xl font-bold text-[#2F327D]">
+                One-on-One
+                <br />
+                <span className="text-[#DAA520]">Discussions</span>
+              </h2>
+              <p className="text-[#696984] mt-8 max-w-md leading-7">
+                Teachers and teacher assistants can talk with students privately
+                without leaving the environment.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Section 11 */}
+
+        {/* Road Map Button */}
+        {/* Road Map Button */}
+
         <NewsLetter />
       </main>
     </>
