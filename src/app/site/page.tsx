@@ -318,7 +318,30 @@ export default function Home() {
         </section>
 
         {/* Section 08 */}
-        <section className="container mx-auto md:my-20 my-8"></section>
+        <section className="container mx-auto md:my-20 my-8">
+          <div className="flex items-center justify-between gap-10 lg:flex-row flex-col">
+            <div className="flex-1">
+              <h2 className="md:text-3xl text-xl font-bold text-[#2F327D]">
+                <span className="text-[#DAA520]">Tools</span> For Teachers{" "}
+                <br /> And Learners
+              </h2>
+              <p className="text-[#696984] mt-8 max-w-md leading-7">
+                Class has a dynamic set of teaching tools built to be deployed
+                and used during class. Teachers can handout assignments in
+                real-time for students to complete and submit.
+              </p>
+            </div>
+            <div className="flex-1">
+              <Image
+                src={"/img/section-08-img.png"}
+                alt="Course Creation Hub"
+                width={400}
+                height={400}
+                className="w-full"
+              />
+            </div>
+          </div>
+        </section>
         {/* Section 08 */}
 
         <NewsLetter />
