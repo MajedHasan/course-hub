@@ -1,4 +1,5 @@
 import NewsLetter from "@/components/common/newsletter";
+import Testimonial from "@/components/common/testimonial";
 import Thunder from "@/components/icons/thunder";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -428,8 +429,17 @@ export default function Home() {
         {/* Section 11 */}
 
         {/* Road Map Button */}
+        <section className="container mx-auto md:my-20 my-8">
+          <Link
+            href={"/road-map"}
+            className="mx-auto max-w-[230px] w-full border border-themePrimary py-4 px-1 rounded-full text-center font-bold text-themePrimary text-2xl block hover:bg-themePrimary hover:text-slate-50"
+          >
+            Road Map
+          </Link>
+        </section>
         {/* Road Map Button */}
 
+        <Testimonial />
         <NewsLetter />
       </main>
     </>

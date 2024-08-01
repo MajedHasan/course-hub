@@ -65,7 +65,7 @@ export default authMiddleware({
       return NextResponse.rewrite(new URL("/site/pricing", req.url));
     }
 
-    // ================== For Pricing Page
+    // ================== For Road Map Page
     if (
       url.pathname === "/road-map" &&
       url.host === process.env.NEXT_PUBLIC_DOMAIN
