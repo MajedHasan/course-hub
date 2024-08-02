@@ -1,4 +1,5 @@
 import React from "react";
+import Sidebar from "./_components/sidebar";
 
 type Props = {};
 
@@ -15,8 +16,11 @@ const MarketplacePage = (props: Props) => {
         </div>
       </section>
 
-      <main>
-        <aside></aside>
+      <main className="py-20 flex gap-10 mx-auto w-full max-w-[95%]">
+        <aside className="block max-w-xs w-full shadow bg-white py-7 px-3 rounded">
+          <Sidebar />
+        </aside>
+        <section className="bg-white shadow py-7 px-3 flex-1 rounded"></section>
       </main>
     </>
   );
