@@ -1,3 +1,4 @@
+import ContactForm from "@/components/forms/contactForm";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,7 +19,7 @@ const ContactPage = (props: Props) => {
         Contact Page
       </h1>
       <section className="shadow rounded py-7 px-8 w-full mb-20 grid lg:grid-cols-4 grid-cols-1 gap-10 bg-slate-50">
-        <form action="" className="col-span-3"></form>
+        <ContactForm />
         <div className="flex flex-col gap-6">
           <Card className="text-center">
             <CardHeader>
