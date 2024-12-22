@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -19,13 +21,19 @@ import {
 } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
 import { Separator } from "../ui/separator";
-import { currentUser } from "@clerk/nextjs/server";
-import { SignOutButton } from "@clerk/nextjs";
+import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
+import { logout } from "@/store/slices/userSlice";
 
 type Props = {};
 
-const Header = async (props: Props) => {
-  const user = await currentUser();
+const Header = (props: Props) => {
+  const user = useAppSelector((state) => state.user.currentUser);
+  const isAuthenticated = useAppSelector((state) => state.user.isAuthenticated);
+  const dispatch = useAppDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   let dashboard = "users";
   if (user?.publicMetadata.role === "ADMIN") {
@@ -105,14 +113,21 @@ const Header = async (props: Props) => {
             <>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Avatar>
+                  <Avatar className="cursor-pointer">
                     <AvatarImage src={user.profileImageUrl} alt="Profile Pic" />
-                    <AvatarFallback>
-                      {user.emailAddresses[0].emailAddress}
-                    </AvatarFallback>
+                    <AvatarFallback>{user.username}</AvatarFallback>
                   </Avatar>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56">
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href={`${process.env.NEXT_PUBLIC_DOMAIN}/${dashboard}`}
+                      className="cursor-pointer flex w-full"
+                    >
+                      <User className="mr-2 h-4 w-4" />
+                      <span>Dashboard</span>
+                    </Link>
+                  </DropdownMenuItem>
                   <DropdownMenuGroup>
                     <DropdownMenuItem>
                       <Link
@@ -134,12 +149,14 @@ const Header = async (props: Props) => {
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <SignOutButton>
+                    {/* <SignOutButton> */}
+                    <Button variant={"destructive"} className="w-full">
                       <div className="flex">
                         <LogOut className="mr-2 h-4 w-4" />
                         <span>Log out</span>
                       </div>
-                    </SignOutButton>
+                    </Button>
+                    {/* </SignOutButton> */}
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -147,10 +164,10 @@ const Header = async (props: Props) => {
           ) : (
             <div className="flex items-center gap-2">
               <Button asChild variant={"link"}>
-                <Link href={"/site/sign-up"}>Sign Up</Link>
+                <Link href={"/auth/sign-up"}>Sign Up</Link>
               </Button>
               <Button asChild variant={"default"}>
-                <Link href={"/site/sign-in"}>Login</Link>
+                <Link href={"/auth/sign-in"}>Login</Link>
               </Button>
             </div>
           )}

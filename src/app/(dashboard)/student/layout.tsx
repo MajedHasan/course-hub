@@ -1,3 +1,5 @@
+"use client";
+
 import StudentSidebar from "@/components/global/sidebar/student-sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +19,7 @@ import {
 } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { currentUser } from "@clerk/nextjs/server";
+import { useAppSelector } from "@/hooks/useRedux";
 import {
   BarChart,
   Bell,
@@ -29,8 +31,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const StudentLayout = async ({ children }: { children: React.ReactNode }) => {
-  const user = await currentUser();
+const StudentLayout = ({ children }: { children: React.ReactNode }) => {
+  const user = useAppSelector((state) => state.user.currentUser);
+  const isAuthenticated = useAppSelector((state) => state.user.isAuthenticated);
 
   return (
     <>

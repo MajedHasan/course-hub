@@ -1,7 +1,9 @@
+"use client";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { useAppSelector } from "@/hooks/useRedux";
 import { AdminSidebarItems } from "@/lib/constants";
-import { currentUser } from "@clerk/nextjs/server";
 import {
   BetweenHorizonalEndIcon,
   BookDashedIcon,
@@ -19,8 +21,8 @@ import React from "react";
 
 type Props = {};
 
-const AdminSidebar = async (props: Props) => {
-  const user = await currentUser();
+const AdminSidebar = (props: Props) => {
+  const user = useAppSelector((state) => state.user.currentUser);
 
   return (
     <aside className="flex flex-col gap-5 justify-between h-full p-3">
